@@ -9,6 +9,8 @@ Original file is located at
 
 import matplotlib.pyplot as plt
 import numpy as np
+import jax
+import jax.numpy as jnp
 import scipy
 from scipy.stats import gaussian_kde
 
