@@ -9,8 +9,6 @@ Original file is located at
 
 import matplotlib.pyplot as plt
 import numpy as np
-import jax
-import jax.numpy as jnp
 import scipy
 from scipy.stats import gaussian_kde
 
@@ -79,10 +77,10 @@ Do LM based off slices
 """
 
 def check_ystr(Zcurrent, ystr):
-  Z_approx = Zcurrent.at[:, 1].set(jnp.round(Zcurrent[:, 1]))
+  Z_approx = Zcurrent.at[:, 1].set(np.round(Zcurrent[:, 1]))
   Zlm = Z_approx[Z_approx[:, 1] == ystr]
 
-  Zlm = Zlm.at[:, 0].set(jnp.round(Zlm[:, 0], 2))
+  Zlm = Zlm.at[:, 0].set(np.round(Zlm[:, 0], 2))
 
   samples = Zlm[:,0]
 
