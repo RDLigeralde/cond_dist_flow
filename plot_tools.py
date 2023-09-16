@@ -80,7 +80,7 @@ def check_ystr(Zcurrent, ystr):
 
   samples = Zlm[:,0]
 
-  plt.hist(samples, bins=50, density=True, alpha=0.5, color='b', label='Histogram')
+  plt.hist(samples, bins = np.sqrt(bs), density=True, alpha=0.5, color='b', label='Histogram')
 
   kde = gaussian_kde(samples)
   x = np.linspace(min(samples), max(samples), 1000)
