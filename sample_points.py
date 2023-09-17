@@ -13,7 +13,7 @@ import numpy as np
 """
 Given joint dist. samples, sample product of marginal dists.
 """
-def sample_marginals(N, M, data)
+def sample_marginals(N, M, data):
 
   data_product = np.transpose([np.tile(data[:,0], N), np.repeat(data[:,1], N)])
 
